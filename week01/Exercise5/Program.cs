@@ -1,3 +1,6 @@
+// Mon Carlo R. Alalan
+// CSE210 Team 02 - Wednesdays 16:00 (UTC-0)
+// C# Programming Exercise 5—Functions
 using System;
 
 class Program

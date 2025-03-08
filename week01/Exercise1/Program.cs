@@ -1,3 +1,8 @@
+// Mon Carlo R. Alalan
+// CSE210 Team 02 - Wednesdays 16:00 (UTC-0)
+// C# Programming Exercise 1—Variables, Input, and Output
+
+
 using System;
 
 class Program

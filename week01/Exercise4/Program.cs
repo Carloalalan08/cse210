@@ -1,3 +1,7 @@
+// Mon Carlo R. Alalan
+// CSE210 Team 02 - Wednesdays 16:00 (UTC-0)
+// C# Programming Exercise 4—Lists
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
