@@ -1,0 +1,41 @@
+# Mon Carlo R. Alalan
+# CSE 210 Team 02 - Wednesdays 16:00 (UTC-0)
+# W02 Assignment: Explain Abstraction
+
+Abstraction in Programming:
+
+Abstraction is the process of hiding the complex details of how something works and only exposing the necessary parts 
+to the user. It allows programmers to focus on what an object or a function does, rather than getting lost in how it 
+does it. This simplifies the code and makes it easier to work with because we only deal with relevant information.
+
+Benefit of Abstraction: 
+
+One major benefit of abstraction is that it helps reduce complexity. By focusing on high-level 
+operations and hiding unnecessary details, we make our programs easier to maintain and use. This makes the program more 
+understandable and less prone to errors.
+
+Application of Abstraction: In the program I wrote, abstraction is used in classes like the Entry class. This class hides 
+the details of how an entry is saved, displayed, or loaded. The user doesn’t need to know the specifics; they just interact 
+with the class by calling simple methods like AddEntry() or DisplayEntries().
+
+Code Example:
+
+public class Entry
+{
+    public string Prompt { get; set; }
+    public string Response { get; set; }
+    public string Date { get; set; }
+
+    public Entry(string prompt, string response, string date)
+    {
+        Prompt = prompt;
+        Response = response;
+        Date = date;
+    }
+}
+
+In this code, we don't worry about the internal workings of the Entry class. We simply create a new entry using a constructor 
+and then interact with it through its properties, such as Prompt, Response, and Date.
+
+Conclusion: Abstraction allows us to focus on what is important and makes the program easier to manage. It is key to writing 
+clean, maintainable code, especially as programs grow more complex.
