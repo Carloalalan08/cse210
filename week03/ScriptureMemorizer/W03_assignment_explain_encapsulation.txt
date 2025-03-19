@@ -2,12 +2,10 @@
 // CSE 210 Team 02 - Wednesdays 16:00 (UTC-0)
 // W03 Assignment: Explain Encapsulation
 
-Encapsulation and Its Importance
-Encapsulation is one of the four fundamental principles of object-oriented programming (OOP), 
-along with inheritance, polymorphism, and abstraction. It refers to the practice of bundling 
-data (variables) and methods (functions) that operate on that data into a single unit, typically a class. 
-Additionally, encapsulation restricts direct access to some of an object's components, enforcing 
-data protection and controlling how data is modified.
+Encapsulation:
+Encapsulation refers to the practice of bundling data (variables) and methods (functions) that 
+operate on that data into a single unit, typically a class. Additionally, encapsulation restricts 
+direct access to some of an object's components, enforcing data protection and controlling how data is modified.
 
 One key benefit of encapsulation is data hiding, which helps prevent unintended interference and 
 maintains the integrity of an object’s internal state. This ensures that data can only be accessed or 
