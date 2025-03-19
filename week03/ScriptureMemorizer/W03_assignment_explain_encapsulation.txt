@@ -1,0 +1,55 @@
+// Mon Carlo R. Alalan
+// CSE 210 Team 02 - Wednesdays 16:00 (UTC-0)
+// W03 Assignment: Explain Encapsulation
+
+Encapsulation and Its Importance
+Encapsulation is one of the four fundamental principles of object-oriented programming (OOP), 
+along with inheritance, polymorphism, and abstraction. It refers to the practice of bundling 
+data (variables) and methods (functions) that operate on that data into a single unit, typically a class. 
+Additionally, encapsulation restricts direct access to some of an object's components, enforcing 
+data protection and controlling how data is modified.
+
+One key benefit of encapsulation is data hiding, which helps prevent unintended interference and 
+maintains the integrity of an object’s internal state. This ensures that data can only be accessed or 
+modified through well-defined interfaces (getters and setters). Encapsulation also improves code 
+maintainability, as changes to the internal implementation of a class do not affect the external 
+code that uses it.
+
+Application of Encapsulation:
+In my Scripture Memorizer Program, encapsulation is used to protect and manage scripture data. 
+The Word class encapsulates individual words, allowing them to be hidden or displayed without 
+exposing the internal implementation to other parts of the program. The Scripture class manages 
+a list of Word objects, ensuring that word manipulation follows controlled methods.
+
+Example Code Demonstrating Encapsulation:
+
+class Word
+{
+    private string _text;
+    private bool _isHidden;
+
+    public Word(string text)
+    {
+        _text = text;
+        _isHidden = false;
+    }
+
+    public void Hide()
+    {
+        _isHidden = true;
+    }
+
+    public string GetDisplayText()
+    {
+        return _isHidden ? new string('_', _text.Length) : _text;
+    }
+}
+
+Explanation of Encapsulation in This Code:
+
+The _text and _isHidden fields are private, meaning they cannot be accessed directly from outside the class.
+The Hide() method modifies the _isHidden variable, controlling how the word is hidden.
+The GetDisplayText() method ensures controlled access to the word's text, returning 
+either the actual word or a hidden version.
+This approach ensures that other classes cannot modify a word’s visibility arbitrarily, 
+reinforcing encapsulation.

@@ -1,3 +1,7 @@
+// Mon Carlo R. Alalan
+// CSE 210 Team 02 - Wednesdays 16:00 (UTC-0)
+// W03 Team Activity: Scripture Memorizer Design
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
