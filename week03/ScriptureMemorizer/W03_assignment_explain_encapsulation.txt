@@ -19,7 +19,7 @@ The Word class encapsulates individual words, allowing them to be hidden or disp
 exposing the internal implementation to other parts of the program. The Scripture class manages 
 a list of Word objects, ensuring that word manipulation follows controlled methods.
 
-Example Code Demonstrating Encapsulation:
+Example Code Showing Encapsulation:
 
 class Word
 {
