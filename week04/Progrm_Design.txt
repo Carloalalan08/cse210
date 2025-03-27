@@ -98,8 +98,6 @@ Program Execution Flow
    - Shipping label
    - Total price of the order
 
----
-
 Conclusion
 This document outlines the design of the two foundation programs, including their structure, class responsibilities, attributes, and behaviors. These designs ensure abstraction in the YouTube Video program and encapsulation in the Online Ordering program. The implementations will follow these designs to create well-organized, modular, and maintainable code structures.
 
