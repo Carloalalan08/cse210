@@ -2,7 +2,10 @@ W04 Assignment: Program Design Document
 Foundation Program #1: Abstraction with YouTube Videos
 
 What does the program do?
-This program keeps track of YouTube videos and the comments left on them. It stores details about each video, including its title, author, and length, as well as a list of comments. The program then displays all stored videos along with their respective comments.
+This program keeps track of YouTube videos and the comments left on them.
+It stores details about each video, including its title, author, and length, 
+as well as a list of comments. The program then displays all stored videos along 
+with their respective comments.
 
 Candidates for Classes
 1. Video
@@ -39,7 +42,9 @@ Program Execution Flow
 Foundation Program #2: Encapsulation with Online Ordering
 
 What does the program do?
-This program manages an online ordering system that includes products, customers, addresses, and orders. It calculates the total cost of an order, generates packing labels, and produces shipping labels.
+This program manages an online ordering system that includes products, customers, 
+addresses, and orders. It calculates the total cost of an order, generates packing labels, 
+produces shipping labels.
 
 Candidates for Classes
 1. Product
@@ -98,6 +103,8 @@ Program Execution Flow
    - Shipping label
    - Total price of the order
 
-Conclusion
-This document outlines the design of the two foundation programs, including their structure, class responsibilities, attributes, and behaviors. These designs ensure abstraction in the YouTube Video program and encapsulation in the Online Ordering program. The implementations will follow these designs to create well-organized, modular, and maintainable code structures.
-
+Conclusion:
+This document outlines the design of the two foundation programs, including their structure, 
+class responsibilities, attributes, and behaviors. These designs ensure abstraction in the YouTube 
+Video program and encapsulation in the Online Ordering program. The implementations will follow these 
+designs to create well-organized, modular, and maintainable code structures.
