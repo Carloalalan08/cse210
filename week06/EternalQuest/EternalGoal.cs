@@ -1,22 +1,14 @@
-public class EternalGoal : Goal
+class EternalGoal : Goal
 {
     public EternalGoal(string name, string description, int points)
-        : base(name, description, points)
-    {
-    }
+        : base(name, description, points) { }
 
     public override void RecordEvent()
     {
-        // No change to completion status
+        Console.WriteLine($"You earned {_points} points!");
     }
 
-    public override bool IsComplete()
-    {
-        return false; // Eternal goals never complete
-    }
+    public override bool IsComplete() => false;
 
-    public override string GetStringRepresentation()
-    {
-        return $"EternalGoal|{_shortName}|{_description}|{_points}";
-    }
+    public override string GetStringRepresentation() => $"{_name},{_description},{_points}";
 }

@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-
-public class GoalManager
+class GoalManager
 {
     private List<Goal> _goals;
     private int _score;
@@ -14,7 +11,7 @@ public class GoalManager
 
     public void Start()
     {
-        // Menu system will be implemented here
+        // Main menu loop
     }
 
     public void DisplayPlayerInfo()
@@ -24,37 +21,34 @@ public class GoalManager
 
     public void ListGoalNames()
     {
-        for (int i = 0; i < _goals.Count; i++)
+        foreach (var goal in _goals)
         {
-            Console.WriteLine($"{i + 1}. {_goals[i].GetShortName()}");
+            Console.WriteLine(goal.GetDetailsString());
         }
     }
 
     public void ListGoalDetails()
     {
-        for (int i = 0; i < _goals.Count; i++)
-        {
-            Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
-        }
+        // Show detailed goal info
     }
 
     public void CreateGoal()
     {
-        // Prompt user and add a goal to _goals
+        // Allow user to create a new goal
     }
 
     public void RecordEvent()
     {
-        // Record progress on a selected goal
+        // Record an event for a goal
     }
 
     public void SaveGoals()
     {
-        // Serialize goal data to a file
+        // Save goals to a file
     }
 
     public void LoadGoals()
     {
-        // Read and deserialize goal data from file
+        // Load goals from a file
     }
 }
