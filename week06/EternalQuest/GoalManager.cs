@@ -47,7 +47,6 @@ public class GoalManager
             "checklist" => new ChecklistGoal(name, description, points, target, bonus),
             _ => throw new ArgumentException("Invalid goal type")
         };
-
         _goals.Add(newGoal);
     }
 
