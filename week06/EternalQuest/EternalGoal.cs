@@ -1,20 +1,24 @@
+using System;
+
 public class EternalGoal : Goal
 {
     public EternalGoal(string name, string description, int points)
-        : base(name, description, points) { }
-
-    public override void RecordEvent()
+        : base(name, description, points)
     {
-        // Logic might go in GoalManager to add _points each time
+    }
+
+    public override int RecordEvent()
+    {
+        return 0; // Eternal goals never give points on recording events
     }
 
     public override bool IsComplete()
     {
-        return false; // Never completed
+        return false; // Eternal goals are never complete
     }
 
     public override string GetStringRepresentation()
     {
-        return $"EternalGoal:{_shortName},{_description},{_points}";
+        return $"{_shortName} - {_description}, This goal never completes.";
     }
 }

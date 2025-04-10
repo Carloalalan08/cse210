@@ -14,47 +14,59 @@ public class GoalManager
 
     public void Start()
     {
-        // TODO: Main menu loop
+        // Start the goal tracking system here
     }
 
     public void DisplayPlayerInfo()
     {
-        Console.WriteLine($"You have {_score} points.");
+        Console.WriteLine($"Total Score: {_score}");
     }
 
     public void ListGoalNames()
     {
-        for (int i = 0; i < _goals.Count; i++)
-        {
-            Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
-        }
-    }
-
-    public void ListGoalDetails()
-    {
-        foreach (Goal goal in _goals)
+        foreach (var goal in _goals)
         {
             Console.WriteLine(goal.GetDetailsString());
         }
     }
 
-    public void CreateGoal()
+    public void ListGoalDetails()
     {
-        // TODO: Handle goal creation menu
+        foreach (var goal in _goals)
+        {
+            Console.WriteLine(goal.GetDetailsString());
+        }
     }
 
-    public void RecordEvent()
+    public void CreateGoal(string goalType, string name, string description, int points, int target = 0, int bonus = 0)
     {
-        // TODO: Let user choose a goal and record progress
+        Goal newGoal = goalType.ToLower() switch
+        {
+            "simple" => new SimpleGoal(name, description, points),
+            "eternal" => new EternalGoal(name, description, points),
+            "checklist" => new ChecklistGoal(name, description, points, target, bonus),
+            _ => throw new ArgumentException("Invalid goal type")
+        };
+
+        _goals.Add(newGoal);
     }
 
-    public void SaveGoals(string filename)
+    public void RecordEvent(string goalName)
     {
-        // TODO: Save goals to a file
+        var goal = _goals.Find(g => g.GetStringRepresentation().Contains(goalName));
+        if (goal != null)
+        {
+            _score += goal.RecordEvent();
+        }
     }
 
-    public void LoadGoals(string filename)
+    public void SaveGoals()
     {
-        // TODO: Load goals from a file
+        // Implement logic to save goals to a file
+    }
+
+    public void LoadGoals()
+    {
+        // Implement logic to load goals from a file
     }
 }
