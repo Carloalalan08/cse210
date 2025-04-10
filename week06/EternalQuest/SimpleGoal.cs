@@ -1,23 +1,16 @@
-using System;
-
 public class SimpleGoal : Goal
 {
     private bool _isComplete;
 
-    public SimpleGoal(string name, string description, int points) 
+    public SimpleGoal(string name, string description, int points)
         : base(name, description, points)
     {
         _isComplete = false;
     }
 
-    public override int RecordEvent()
+    public override void RecordEvent()
     {
-        if (!_isComplete)
-        {
-            _isComplete = true;
-            return _points;
-        }
-        return 0; // No points if the goal is already complete
+        _isComplete = true;
     }
 
     public override bool IsComplete()
@@ -27,6 +20,6 @@ public class SimpleGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        return $"{_shortName} - {_description}, Complete: {_isComplete}";
+        return $"SimpleGoal|{_shortName}|{_description}|{_points}|{_isComplete}";
     }
 }

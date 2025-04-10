@@ -1,5 +1,3 @@
-using System;
-
 public class EternalGoal : Goal
 {
     public EternalGoal(string name, string description, int points)
@@ -7,18 +5,18 @@ public class EternalGoal : Goal
     {
     }
 
-    public override int RecordEvent()
+    public override void RecordEvent()
     {
-        return 0; // Eternal goals never give points on recording events
+        // No change to completion status
     }
 
     public override bool IsComplete()
     {
-        return false; // Eternal goals are never complete
+        return false; // Eternal goals never complete
     }
 
     public override string GetStringRepresentation()
     {
-        return $"{_shortName} - {_description}, This goal never completes.";
+        return $"EternalGoal|{_shortName}|{_description}|{_points}";
     }
 }

@@ -14,58 +14,47 @@ public class GoalManager
 
     public void Start()
     {
-        // Start the goal tracking system here
+        // Menu system will be implemented here
     }
 
     public void DisplayPlayerInfo()
     {
-        Console.WriteLine($"Total Score: {_score}");
+        Console.WriteLine($"Current Score: {_score}");
     }
 
     public void ListGoalNames()
     {
-        foreach (var goal in _goals)
+        for (int i = 0; i < _goals.Count; i++)
         {
-            Console.WriteLine(goal.GetDetailsString());
+            Console.WriteLine($"{i + 1}. {_goals[i].GetShortName()}");
         }
     }
 
     public void ListGoalDetails()
     {
-        foreach (var goal in _goals)
+        for (int i = 0; i < _goals.Count; i++)
         {
-            Console.WriteLine(goal.GetDetailsString());
+            Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
         }
     }
 
-    public void CreateGoal(string goalType, string name, string description, int points, int target = 0, int bonus = 0)
+    public void CreateGoal()
     {
-        Goal newGoal = goalType.ToLower() switch
-        {
-            "simple" => new SimpleGoal(name, description, points),
-            "eternal" => new EternalGoal(name, description, points),
-            "checklist" => new ChecklistGoal(name, description, points, target, bonus),
-            _ => throw new ArgumentException("Invalid goal type")
-        };
-        _goals.Add(newGoal);
+        // Prompt user and add a goal to _goals
     }
 
-    public void RecordEvent(string goalName)
+    public void RecordEvent()
     {
-        var goal = _goals.Find(g => g.GetStringRepresentation().Contains(goalName));
-        if (goal != null)
-        {
-            _score += goal.RecordEvent();
-        }
+        // Record progress on a selected goal
     }
 
     public void SaveGoals()
     {
-        // Implement logic to save goals to a file
+        // Serialize goal data to a file
     }
 
     public void LoadGoals()
     {
-        // Implement logic to load goals from a file
+        // Read and deserialize goal data from file
     }
 }
